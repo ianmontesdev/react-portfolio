@@ -1,13 +1,30 @@
-import { Component } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleNavState } from "../stores/navStore";
+import "../assets/css/Nav.css";
 
-class Nav extends Component {
-  render() {
-    return (
-      <>
-        <h1>Placeholder</h1>
-      </>
-    );
-  }
-}
+export const Nav = () => {
+  const dispatch = useDispatch();
+  const navState = useSelector((state) => state.navState);
+
+  const handleClick = () => {
+    dispatch(toggleNavState());
+  };
+
+  let btnClass = navState ? "btn-right" : "btn-left";
+  let navClass = navState ? "nav-dark" : "nav-yellow";
+  let logoClass = navState ? "logo-yellow" : "logo-dark";
+
+  return (
+    <>
+      <nav className={navClass}>
+        <i className={`fa-solid fa-code nav-icons ${logoClass}`}></i>
+        <div id="btn-switch">
+          <div className={btnClass} onClick={handleClick}></div>
+        </div>
+        <i className={`fa-solid fa-pen-nib nav-icons ${logoClass}`}></i>
+      </nav>
+    </>
+  );
+};
 
 export default Nav;
