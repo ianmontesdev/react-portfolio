@@ -11,8 +11,8 @@ export const Nav = () => {
   };
 
   let btnClass = navState ? "btn-right" : "btn-left";
-  let navClass = navState ? "nav-dark" : "nav-yellow";
-  let logoClass = navState ? "logo-yellow" : "logo-dark";
+  let navClass = navState ? "nav-yellow" : "nav-dark";
+  let logoClass = navState ? "logo-dark" : "logo-yellow";
 
   return (
     <>

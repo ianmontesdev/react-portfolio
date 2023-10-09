@@ -1,0 +1,117 @@
+.profile-container-pic {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.portfolio-code-text-container {
+  padding-bottom: 4rem;
+}
+
+.portfolio-code-text-container * {
+  text-align: left;
+}
+.portfolio-code-divisor {
+  display: none;
+}
+
+.profile-container-bar-big {
+  display: none;
+}
+
+.profile-container-bar-small {
+  display: none;
+}
+
+.profile-container-ball {
+  display: none;
+}
+
+pre * {
+  white-space: pre-wrap;
+}
+
+#portfolio-code {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--dark);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+  }
+
+  .portfolio-code-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .profile-container-pic {
+    border-radius: 20px;
+    width: auto;
+    height: 160px;
+  }
+
+  .portfolio-code-divisor {
+    display: block;
+    width: 5px;
+    height: 80vh;
+    background-color: var(--yellow);
+    border-radius: 3px;
+    flex-basis: auto;
+  }
+
+  .portfolio-code-text-container {
+    height: 80vh;
+    overflow-y: scroll;
+    padding-right: 2rem;
+    overflow-x: hidden;
+    max-width: 800px;
+  }
+
+  .portfolio-code-text-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .portfolio-code-text-container::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 5px;
+  }
+
+  .profile-container-bar-big {
+    display: block;
+    width: 257px;
+  }
+
+  .profile-container-bar-small {
+    display: block;
+    width: 207px;
+  }
+
+  .profile-container-ball {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: var(--yellow);
+    margin-top: 3rem;
+  }
+
+  #portfolio-code {
+    display: flex;
+    flex-direction: row;
+    gap: 49px;
+    height: auto;
+    width: auto;
+    align-items: flex-start;
+  }
+}
