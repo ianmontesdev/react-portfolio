@@ -45,7 +45,7 @@ FullStack Dev*/
 
 // Tech Stack`}
             </Highlight>
-            <div className="stack-container">
+            <div className="profile-container-stack-container">
               <i className="fa-brands fa-square-js"></i>
               <i className="fa-brands fa-angular"></i>
               <i className="fa-brands fa-java"></i>
@@ -53,7 +53,8 @@ FullStack Dev*/
             </div>
 
             <Highlight className="language-javascript">
-              {`let currentEducation = [];
+              {`
+let currentEducation = [];
 
 // Currently onGoing studies
 
