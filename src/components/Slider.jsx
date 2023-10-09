@@ -1,7 +1,9 @@
+import PortfolioCode from "./PortfolioCode";
+
 const Slider = () => {
   return (
     <>
-      <h1>Hola</h1>
+      <PortfolioCode />
     </>
   );
 };

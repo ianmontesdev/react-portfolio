@@ -5,3 +5,7 @@
   --dark: #121212;
   --medium: #454545;
 }
+
+body {
+  background-color: #444;
+}
