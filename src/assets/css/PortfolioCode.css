@@ -5,8 +5,8 @@
 }
 
 .portfolio-code-text-container {
-  padding-bottom: 4rem;
   padding: 0 0.5rem;
+  padding-bottom: 4rem;
 }
 
 .portfolio-code-divisor {
@@ -59,6 +59,7 @@ pre * {
     align-items: flex-end;
     gap: 1rem;
     padding-left: 1rem;
+    height: 80vh;
   }
 
   .profile-container-pic {
@@ -80,6 +81,7 @@ pre * {
     overflow-y: scroll;
     overflow-x: hidden;
     max-width: 800px;
+    padding: 0.5rem;
   }
 
   .portfolio-code-text-container::-webkit-scrollbar {
@@ -107,7 +109,7 @@ pre * {
     height: 44px;
     border-radius: 22px;
     background-color: var(--yellow);
-    margin-top: 3rem;
+    margin-top: auto;
   }
 
   #portfolio-code {
