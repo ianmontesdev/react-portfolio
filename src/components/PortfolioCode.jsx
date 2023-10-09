@@ -1,45 +1,38 @@
 import Highlight from "react-highlight";
 import "../assets/css/PortfolioCode.css";
 
+// Import images
+import barBig from "../assets/img/bar-big.svg";
+import barSmall from "../assets/img/bar-small.svg";
+import profilePic from "../assets/img/profile-web.jpeg";
+
 const PortfolioSection = () => {
   return (
     <>
       <main className="portfolio-container">
         <section id="portfolio-code">
           <div className="portfolio-code-profile-container">
+            <img className="profile-container-pic" src={profilePic} alt="" />
+            <img className="profile-container-bar-big" src={barBig} alt="" />
             <img
-              className="profile-container-pic"
-              src="src/assets/img/profile-web.jpeg"
-              alt=""
-            />
-            <img
-              className="profile-container-bar-big"
-              src="src/assets/img/bar-big.svg"
+              className="profile-container-bar-small"
+              src={barSmall}
               alt=""
             />
             <img
               className="profile-container-bar-small"
-              src="src/assets/img/bar-small.svg"
+              src={barSmall}
               alt=""
             />
             <img
               className="profile-container-bar-small"
-              src="src/assets/img/bar-small.svg"
+              src={barSmall}
               alt=""
             />
+            <img className="profile-container-bar-big" src={barBig} alt="" />
             <img
               className="profile-container-bar-small"
-              src="src/assets/img/bar-small.svg"
-              alt=""
-            />
-            <img
-              className="profile-container-bar-big"
-              src="src/assets/img/bar-big.svg"
-              alt=""
-            />
-            <img
-              className="profile-container-bar-small"
-              src="src/assets/img/bar-small.svg"
+              src={barSmall}
               alt=""
             />
             <div className="profile-container-ball"></div>
