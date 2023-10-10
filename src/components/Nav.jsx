@@ -18,8 +18,8 @@ export const Nav = () => {
     <>
       <nav className={navClass}>
         <i className={`fa-solid fa-code nav-icons ${logoClass}`}></i>
-        <div id="btn-switch">
-          <div className={btnClass} onClick={handleClick}></div>
+        <div id="btn-switch" onClick={handleClick}>
+          <div className={btnClass}></div>
         </div>
         <i className={`fa-solid fa-pen-nib nav-icons ${logoClass}`}></i>
       </nav>

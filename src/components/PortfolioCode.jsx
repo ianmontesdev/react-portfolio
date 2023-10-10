@@ -85,8 +85,8 @@ currentEducation[2] = {
     framework-used: 'Vue3',
     imparted-by: 'ManzDev',
     final-project: {
-      video-presentation: '',
-      demo-url: ''
+      video-presentation: 'https://www.youtube.com/watch?v=fGUKov9ht9o',
+      demo-url: 'https://amigaria.vercel.app'
     }
   }
 }
@@ -95,7 +95,7 @@ currentEducation[2] = {
 let myExperience = []
 
 myExperience[0] = {
-  description: {
+  info: {
     name: 'NASA Api',
     description: "Consuming NASA's API to provide Picture of the Day and access to NASA's multimedia database"
   }

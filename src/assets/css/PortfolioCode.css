@@ -1,3 +1,19 @@
+.portfolio-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.portfolio-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--dark);
+}
+
+.portfolio-container::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 10px;
+}
+
 .profile-container-pic {
   display: flex;
   flex-direction: column;
