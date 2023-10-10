@@ -5,6 +5,7 @@ import "../assets/css/PortfolioCode.css";
 import barBig from "../assets/img/bar-big.svg";
 import barSmall from "../assets/img/bar-small.svg";
 import profilePic from "../assets/img/profile-web.jpeg";
+import ImgCard from "./ImgCard";
 
 const PortfolioSection = () => {
   return (
@@ -12,7 +13,7 @@ const PortfolioSection = () => {
       <main className="portfolio-container">
         <section id="portfolio-code">
           <div className="portfolio-code-profile-container">
-            <img className="profile-container-pic" src={profilePic} alt="" />
+            <ImgCard singleImg={profilePic} classNm="profile-container-pic" />{" "}
             <img className="profile-container-bar-big" src={barBig} alt="" />
             <img
               className="profile-container-bar-small"
