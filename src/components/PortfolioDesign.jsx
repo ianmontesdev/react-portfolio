@@ -1,11 +1,18 @@
 import "../assets/css/PortfolioDesign.css";
 import ImgCard from "./ImgCard";
+import profileImg from "../assets/img/profile-design.jpg";
+import gallery1 from "../assets/img/gallery/gallery1.jpg";
+import gallery2 from "../assets/img/gallery/gallery2.jpg";
 
 const PortfolioDesign = () => {
   let imgSources = [
-    "https://picsum.photos/300/200",
-    "https://picsum.photos/300/200",
-    "https://picsum.photos/300/200",
+    gallery1,
+    gallery2,
+    gallery2,
+    gallery2,
+    gallery2,
+    gallery2,
+    gallery2,
     "https://picsum.photos/300/200",
   ];
   return (
@@ -27,10 +34,7 @@ const PortfolioDesign = () => {
               <span className="mobile-title">
                 Photographer & Graphic Designer
               </span>
-              <ImgCard
-                classNm="profile-pic"
-                singleImg={"https://picsum.photos/300/200"}
-              />
+              <ImgCard classNm="profile-pic" singleImg={profileImg} />
             </div>
             <div className="data-detail">
               <i className="fa-solid fa-briefcase"></i>

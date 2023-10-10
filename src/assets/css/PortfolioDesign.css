@@ -124,7 +124,7 @@
   margin-bottom: 0.2rem;
 }
 
-@media screen and (max-width: 1000px) and (min-width: 769px) {
+@media screen and (max-width: 1080px) and (min-width: 769px) {
   .portfolio-photo-container {
     display: flex;
     justify-content: center;
