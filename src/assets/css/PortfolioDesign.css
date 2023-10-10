@@ -43,6 +43,12 @@
   width: 100%;
 }
 
+.mobile-title {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+}
+
 .photo-rounded {
   border-radius: 20px;
   width: 100%;
@@ -116,6 +122,15 @@
   font-style: normal;
   display: block;
   margin-bottom: 0.2rem;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 769px) {
+  .portfolio-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
