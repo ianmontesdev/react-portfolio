@@ -49,6 +49,7 @@ FullStack Dev*/
             <div className="profile-container-stack-container">
               <i className="fa-brands fa-square-js"></i>
               <i className="fa-brands fa-angular"></i>
+              <i className="fa-brands fa-react"></i>
               <i className="fa-brands fa-java"></i>
               <i className="fa-brands fa-python"></i>
             </div>
