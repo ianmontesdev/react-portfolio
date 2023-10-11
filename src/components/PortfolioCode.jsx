@@ -1,13 +1,30 @@
 import Highlight from "react-highlight";
 import "../assets/css/PortfolioCode.css";
+import EndPoints from "./EndPoints";
 
 // Import images
 import barBig from "../assets/img/bar-big.svg";
 import barSmall from "../assets/img/bar-small.svg";
 import profilePic from "../assets/img/profile-web.jpeg";
 import ImgCard from "./ImgCard";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const PortfolioSection = () => {
+  const [response, setResponse] = useState("");
+
+  const getCode = () => {
+    fetch(EndPoints.ApiUrl + EndPoints.Code)
+      .then((datos) => datos.json())
+      .then((datos) => {
+        setResponse(datos);
+        console.log(datos);
+      });
+  };
+
+  useEffect(() => {
+    getCode();
+  }, []);
   return (
     <>
       <main className="portfolio-container">
@@ -41,10 +58,7 @@ const PortfolioSection = () => {
           <div className="portfolio-code-divisor"></div>
           <div className="portfolio-code-text-container">
             <Highlight className="language-javascript">
-              {`/* Ian Montes
-FullStack Dev*/
-
-// Tech Stack`}
+              {response.title}
             </Highlight>
             <div className="profile-container-stack-container">
               <i className="fa-brands fa-square-js"></i>
