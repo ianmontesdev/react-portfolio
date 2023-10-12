@@ -1,0 +1,41 @@
+#contact-container {
+  background-color: var(--dark);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: auto;
+  height: fit-content;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-family: Ubuntu Mono;
+}
+
+form input,
+form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2c3e50;
+  font-size: 13px;
+  resize: vertical;
+}
+
+form input[type="submit"] {
+  background-color: var(--yellow);
+  font-size: 1.2rem;
+  width: fit-content;
+}
+
+form input:active,
+form textarea:active {
+  outline: 2px solid var(--yellow);
+}
