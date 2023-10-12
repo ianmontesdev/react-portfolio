@@ -3,8 +3,6 @@ import "../assets/css/PortfolioCode.css";
 import EndPoints from "./EndPoints";
 
 // Import images
-import barBig from "../assets/img/bar-big.svg";
-import barSmall from "../assets/img/bar-small.svg";
 import ImgCard from "./ImgCard";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -17,12 +15,14 @@ const PortfolioSection = () => {
       .then((datos) => datos.json())
       .then((datos) => {
         setResponse(datos);
+        console.log(datos);
       });
   };
 
   useEffect(() => {
     getCode();
   }, []);
+
   return (
     <>
       <main className="portfolio-container">
@@ -33,26 +33,34 @@ const PortfolioSection = () => {
                 singleImg={response.profilePic}
                 classNm="profile-container-pic"
               />{" "}
-              <img className="profile-container-bar-big" src={barBig} alt="" />
               <img
-                className="profile-container-bar-small"
-                src={barSmall}
+                className="profile-container-bar-big"
+                src={response.assets.barbig}
                 alt=""
               />
               <img
                 className="profile-container-bar-small"
-                src={barSmall}
+                src={response.assets.barsmall}
                 alt=""
               />
               <img
                 className="profile-container-bar-small"
-                src={barSmall}
+                src={response.assets.barsmall}
                 alt=""
               />
-              <img className="profile-container-bar-big" src={barBig} alt="" />
               <img
                 className="profile-container-bar-small"
-                src={barSmall}
+                src={response.assets.barsmall}
+                alt=""
+              />
+              <img
+                className="profile-container-bar-big"
+                src={response.assets.barbig}
+                alt=""
+              />
+              <img
+                className="profile-container-bar-small"
+                src={response.assets.barsmall}
                 alt=""
               />
               <div className="profile-container-ball"></div>
@@ -61,13 +69,12 @@ const PortfolioSection = () => {
             <div className="portfolio-code-text-container">
               <Highlight className="language-javascript">
                 {response.title}
+                {"\n\n//Tech Stack"}
               </Highlight>
               <div className="profile-container-stack-container">
-                <i className="fa-brands fa-square-js"></i>
-                <i className="fa-brands fa-angular"></i>
-                <i className="fa-brands fa-react"></i>
-                <i className="fa-brands fa-java"></i>
-                <i className="fa-brands fa-python"></i>
+                {response.techStack.map((tech, i) => {
+                  return <img src={tech} key={i} />;
+                })}
               </div>
 
               <Highlight className="language-javascript">

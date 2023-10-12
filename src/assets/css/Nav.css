@@ -28,7 +28,7 @@
 nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
   color: var(--yellow);
   font-size: 1.2rem;
   position: fixed;
@@ -40,14 +40,23 @@ nav {
   background-color: var(--dark);
   transform: translate(-50%);
   z-index: 1;
+  font-family: Ubuntu Mono;
+}
+
+nav > section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .nav-dark {
   background-color: var(--dark);
+  color: var(--yellow);
 }
 
 .nav-yellow {
   background-color: var(--yellow);
+  color: var(--dark);
 }
 
 .logo-yellow {
