@@ -55,6 +55,40 @@ const Contact = () => {
           {sendError}
         </p>
       </form>
+      <section id="contact-info">
+        <ul>
+          <span>
+            <i className="fa-solid fa-phone"></i>
+            <span> +34 625 87 59 64</span>
+          </span>
+          <li>
+            <span>
+              <i className="fa-solid fa-envelope"></i>
+              <span>
+                {" "}
+                <a href="mailto:ianmontesdev@gmail.com">
+                  ianmontesdev@gmail.com
+                </a>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span>
+              <i className="fa-solid fa-location-dot"></i>
+              <span> Gran Canaria / Spain</span>
+            </span>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <i className="fa-brands fa-square-github"></i> <span> GitHub</span>
+          </li>
+          <li>
+            <i className="fa-brands fa-linkedin"></i>
+            <span> Linkedin</span>
+          </li>
+        </ul>
+      </section>
     </main>
   );
 };
