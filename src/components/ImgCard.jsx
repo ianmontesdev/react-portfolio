@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ImgCard = ({ imgSrc, singleImg, classNm }) => {
   return (
     <>
@@ -20,6 +22,12 @@ const ImgCard = ({ imgSrc, singleImg, classNm }) => {
       )}
     </>
   );
+};
+
+ImgCard.propTypes = {
+  imgSrc: PropTypes.arrayOf(PropTypes.string),
+  singleImg: PropTypes.string,
+  classNm: PropTypes.string,
 };
 
 export default ImgCard;

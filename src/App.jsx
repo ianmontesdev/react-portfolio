@@ -6,7 +6,6 @@ function App() {
   return (
     <>
       <Slider />
-      {console.log("Holddda")}
       <Nav />
     </>
   );

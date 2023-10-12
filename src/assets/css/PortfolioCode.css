@@ -48,6 +48,29 @@
   color: var(--yellow);
 }
 
+.powered-by {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  margin-right: 1rem;
+  text-align: center;
+  color: var(--yellow);
+  font-family: Ubuntu Mono;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+
+.powered-by > section {
+  display: flex;
+  gap: 1rem;
+}
+
+.power-logo {
+  height: 2rem;
+}
+
 pre * {
   white-space: pre-wrap;
 }
@@ -109,6 +132,9 @@ pre * {
     border-radius: 5px;
   }
 
+  .powered-by {
+    padding-left: 0px;
+  }
   .profile-container-bar-big {
     display: block;
     width: 257px;
