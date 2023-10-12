@@ -43,7 +43,11 @@ nav {
   font-family: Ubuntu Mono;
 }
 
-nav > section {
+a {
+  text-decoration: none;
+}
+
+nav section {
   display: flex;
   align-items: center;
   gap: 0.5rem;
