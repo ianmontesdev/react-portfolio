@@ -8,9 +8,6 @@ const ImgCard = ({ imgSrc, singleImg, classNm }) => {
       ) : (
         <div className="portfolio-gallery-container">
           {imgSrc.map((image, i) => {
-            {
-              console.log(image);
-            }
             return (
               <div className="img-card" key={i}>
                 <img
