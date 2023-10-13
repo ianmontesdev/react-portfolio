@@ -11,7 +11,6 @@ const PortfolioDesign = () => {
       .then((datos) => datos.json())
       .then((datos) => {
         setResponse(datos);
-        console.log(datos);
       });
   };
 
