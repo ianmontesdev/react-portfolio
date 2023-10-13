@@ -81,11 +81,24 @@ const Contact = () => {
         </ul>
         <ul>
           <li>
-            <i className="fa-brands fa-square-github"></i> <span> GitHub</span>
+            <a
+              href="https://github.com/ianmontesdev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-square-github"></i>{" "}
+              <span> GitHub</span>
+            </a>
           </li>
           <li>
-            <i className="fa-brands fa-linkedin"></i>
-            <span> Linkedin</span>
+            <a
+              href="https://www.linkedin.com/in/ian-montes/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fa-brands fa-linkedin"></i>
+              <span> Linkedin</span>
+            </a>
           </li>
         </ul>
       </section>
