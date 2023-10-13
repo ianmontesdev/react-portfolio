@@ -44,6 +44,7 @@
 
 .profile-container-stack-container {
   max-width: 80vw;
+  width: max-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
