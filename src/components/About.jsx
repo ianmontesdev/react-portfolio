@@ -1,6 +1,4 @@
 import "../assets/css/About.css";
-import amigariaImage from "../assets/img/amigaria_actividad_chat.gif";
-import imgProfile from "../assets/img/profile-design.jpg";
 
 const About = () => {
   return (
@@ -8,7 +6,10 @@ const About = () => {
       <main id="about-container">
         <aside>
           <section>
-            <img src={imgProfile} alt="" />
+            <img
+              src="https://storage.googleapis.com/fotoim-portfolio-app.appspot.com/images/about.jpeg"
+              alt=""
+            />
             <div>
               <p>Ian</p>
               <p>Montes</p>

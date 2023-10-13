@@ -131,7 +131,8 @@
 
 @media screen and (min-width: 1324px) {
   #about-container {
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: row;
   }
   #about-container section span {
     font-size: 15rem;
@@ -142,17 +143,18 @@
     background-color: var(--dark);
     width: auto;
     padding: 3rem 6rem;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
     display: flex;
-    flex-direction: r;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--yellow);
+    margin-top: 1.5rem;
   }
   #about-container aside img {
     width: 200px;
