@@ -43,7 +43,7 @@
 }
 
 .profile-container-stack-container {
-  width: max-content;
+  max-width: 80vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
