@@ -61,17 +61,28 @@ form,
   margin: 0.5rem;
 }
 
+fieldset {
+  position: relative;
+  border: none;
+  margin-bottom: 10px;
+}
+
 form label {
-  display: block;
-  text-align: start;
+  position: absolute;
+  line-height: 0;
+  top: 50%;
+  left: 20px;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  color: grey;
 }
 
 form input,
 form textarea {
-  padding: 15px;
+  padding: 12px;
+  padding-top: 24px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
   color: #2c3e50;
@@ -88,4 +99,13 @@ form input[type="submit"] {
 form input:focus:not([type="submit"]),
 form textarea:focus {
   outline: 2px solid var(--yellow);
+}
+
+form input:focus:not([type="submit"]) + label,
+form textarea:focus + label {
+  top: 10px;
+}
+
+.keep-up {
+  top: 10px !important;
 }

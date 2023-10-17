@@ -36,19 +36,30 @@ const Contact = () => {
       );
   };
 
+  function toggleLabel(event) {
+    let label = event.target.nextElementSibling;
+    if (event.target.value != 0) {
+      label.classList.add("keep-up");
+    } else {
+      label.classList.remove("keep-up");
+    }
+  }
+
   return (
     <main id="contact-container">
       <form ref={form} onSubmit={sendEmail}>
-        <label htmlFor="contact_name">Name:</label>
-        <input type="text" name="contact_name" placeholder="Your name" />
-        <label htmlFor="contact_email">E-mail:</label>
-        <input
-          type="email"
-          name="contact_email"
-          placeholder="Your contact email"
-        />
-        <label htmlFor="message">Message:</label>
-        <textarea name="message" placeholder="Write your message..." />
+        <fieldset>
+          <input type="text" name="contact_name" onBlur={toggleLabel} />
+          <label htmlFor="contact_name">Name:</label>
+        </fieldset>
+        <fieldset>
+          <input type="email" name="contact_email" onBlur={toggleLabel} />
+          <label htmlFor="contact_email">E-mail:</label>
+        </fieldset>
+        <fieldset>
+          <textarea name="message" onBlur={toggleLabel} />
+          <label htmlFor="message">Message:</label>
+        </fieldset>
         <input type="submit" value="Send" />
         <p>
           {sendState}
