@@ -33,7 +33,7 @@ ul i {
 
 form,
 #contact-info {
-  width: auto;
+  width: calc(100% - 2rem);
   height: fit-content;
   min-width: 40vw;
   text-align: center;
