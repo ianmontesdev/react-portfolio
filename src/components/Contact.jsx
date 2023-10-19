@@ -8,9 +8,9 @@ const Contact = () => {
   const [sendState, setSendState] = useState(0);
   const [sendMsg, setSendMsg] = useState("");
 
-  const [nameValid, setNameValid] = useState(false);
-  const [emailValid, setEmailValid] = useState(false);
-  const [messageValid, setMessageValid] = useState(false);
+  const [nameValid, setNameValid] = useState(2);
+  const [emailValid, setEmailValid] = useState(2);
+  const [messageValid, setMessageValid] = useState(2);
 
   useEffect(() => {
     switch (sendState) {
@@ -72,33 +72,34 @@ const Contact = () => {
       );
   };
 
+  let startFeedback = "fa-solid fa-star-of-life feedback-start";
   let invalidFeedback = "fa-solid fa-triangle-exclamation";
   let validFeedback = "fa-solid fa-check feedback-valid";
 
   function validateName() {
     form.current.contact_name.value.length !== 0
-      ? setNameValid(true)
-      : setNameValid(false);
+      ? setNameValid(1)
+      : setNameValid(0);
   }
 
   function validateEmail() {
     form.current.contact_email.value.length !== 0 &&
     /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(form.current.contact_email.value)
-      ? setEmailValid(true)
-      : setEmailValid(false);
+      ? setEmailValid(1)
+      : setEmailValid(0);
   }
 
   function validateMessage() {
     form.current.message.value.length !== 0
-      ? setMessageValid(true)
-      : setMessageValid(false);
+      ? setMessageValid(1)
+      : setMessageValid(0);
   }
 
   function validateData(e) {
     validateName();
     validateEmail();
     validateMessage();
-    if (nameValid && emailValid && messageValid) {
+    if (nameValid == 1 && emailValid == 1 && messageValid == 1) {
       sendEmail(e);
     } else {
       e.preventDefault();
@@ -132,7 +133,15 @@ const Contact = () => {
             }}
           />
           <label htmlFor="contact_name">Name:</label>
-          <i className={nameValid ? validFeedback : invalidFeedback}></i>
+          <i
+            className={
+              nameValid == 0
+                ? invalidFeedback
+                : nameValid == 1
+                ? validFeedback
+                : startFeedback
+            }
+          ></i>
         </fieldset>
         <fieldset>
           <input
@@ -144,7 +153,15 @@ const Contact = () => {
             }}
           />
           <label htmlFor="contact_email">E-mail:</label>
-          <i className={emailValid ? validFeedback : invalidFeedback}></i>
+          <i
+            className={
+              emailValid == 0
+                ? invalidFeedback
+                : emailValid == 1
+                ? validFeedback
+                : startFeedback
+            }
+          ></i>
         </fieldset>
         <fieldset>
           <textarea
@@ -155,7 +172,15 @@ const Contact = () => {
             }}
           />
           <label htmlFor="message">Message:</label>
-          <i className={messageValid ? validFeedback : invalidFeedback}></i>
+          <i
+            className={
+              messageValid == 0
+                ? invalidFeedback
+                : messageValid == 1
+                ? validFeedback
+                : startFeedback
+            }
+          ></i>
         </fieldset>
         <fieldset id="sendBtn">
           <input type="submit" value="Send" />

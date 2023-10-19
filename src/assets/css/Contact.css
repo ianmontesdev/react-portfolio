@@ -99,6 +99,12 @@ form i {
   color: firebrick;
 }
 
+.feedback-start {
+  color: var(--medium);
+  font-size: 0.8rem;
+  top: 10px;
+}
+
 .feedback-valid {
   color: rgb(123, 190, 123);
 }
