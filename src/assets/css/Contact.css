@@ -178,3 +178,10 @@ form textarea:focus + label {
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 600px) {
+  form,
+  #contact-info {
+    width: auto;
+  }
+}
