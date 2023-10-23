@@ -50,7 +50,7 @@ form,
 
 #contact-info ul {
   list-style-type: none;
-  min-width: none;
+  min-width: auto;
   width: max-content;
   display: flex;
   justify-content: center;
